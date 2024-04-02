@@ -1,0 +1,43 @@
+@charset "UTF-8";
+#div{
+	height: 100vh;
+	background-image: url("https://cdn2.slidemodel.com/wp-content/uploads/7382-01-duotone-gradients-powerpoint-templates-16x9-2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#mydiv{
+	border: 5px solid white;
+	display:inline-block ;
+	position: absolute;
+	left: 600px;
+	top: 200px;
+	padding: 60px 20px;
+	text-align:  center;
+	line-height: 25px;
+	border-radius: 20px;
+	font-family: sans-serif;
+	box-shadow: 0px 0px 10px 10px plum;
+	font-size: large;
+}
+#bt{
+	padding: 10px 20px;
+	border-radius: 20px;
+	background-color:plum;
+	border: 3px solid white;
+}
+#bt:hover{
+	background-color: purple;
+	color: white;
+}
+h1{
+	position: absolute;
+	left: 700px;
+	top: 125px;
+	font-family: sans-serif;
+	font-weight:bolder ;
+	
+}
+.in{
+	border-radius: 5px;
+	border: 1px solid white;
+}
