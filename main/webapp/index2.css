@@ -1,40 +1,87 @@
-@charset "UTF-8";
-#div{
-	height: 100vh;
-	background-image: url("https://cdn2.slidemodel.com/wp-content/uploads/7382-01-duotone-gradients-powerpoint-templates-16x9-2.jpg");
+body{
+	margin: 0px;
+	font-family: sans-serif;
+}
+
+#nav{
+	height: 120px;
+	width: 100%;	
+	display: flex;
+	align-items: center;
+	position: fixed;
+	/* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwgX97jJ5S7li9IsInbTfc0MmONMjAdOHVsrq12ZvQEQ&s");
+	background-repeat: no-repeat;
+	background-size: 100%;   */	
+}
+#div1{	
+	
+	position: absolute;
+	right: 180px;	
+}
+#div2{
+	position: absolute;
+	right: 70px;	
+	/* background-color: ; */
+}
+.bt:hover{
+	background-color: grey; 
+}
+.a
+{
+	text-decoration: none;
+	color: black;	
+}
+.bt{
+	
+	border: 2px solid black;
+	padding: 11px 20px;
+	border-radius: 25px;
+	color: white;
+}
+#title{
+	margin-left:30px;
+	font-size:xx-large;
+	font-weight: bolder;
+	font
+}
+
+#body1
+{
+	height:125vh;
+	 border:1px solid;
+	 border-color:transparent; 
+	background-image: url("https://static.vecteezy.com/system/resources/previews/005/411/402/non_2x/time-management-concept-of-business-successful-3d-render-illustration-free-photo.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
-#mydiv{
-	border: 5px solid white;
-	display: inline-block;
-	margin-left: 550px;
-	margin-top: 180px;
-	padding: 100px 150px;
-	border-radius: 20px;
-	box-shadow: 0px 0px 10px 10px plum;
-	line-height: 30px;
-	font-family: sans-serif
-	}
-a{
-	text-decoration: none;
+#content{
+	/* margin-left:400px; */
+	font-family: sans-serif;
+	font-weight: bolder;
+	font-size: 400%;
+	text-indent: centre;
+	text-align: center;
+	padding-top:80px;
 }
-#div1{
-	border: 3px solid white;
-	border-radius: 30px;
-	padding: 10px 50px;
-}
+#inner{
+	font-size: large;
+	text-align: center;
+	letter-spacing: 1.5px;
+	font-family: sans-serif;
 
-#div2{
-	border: 3px solid white;
-	border-radius: 30px;
-	padding: 10px 50px;
 }
-#div1:hover{
-	background-color: plum;
-	color: white;
+#body2{
+	height:85vh;
+	width:100%;
 }
-#div2:hover{
-	background-color: plum;
-	color: white;
+#img1{
+	margin-left: 100px;
+	margin-top: 50px;
+}
+#p1{
+	height: 300px;
+	width: 600px;
+	position:absolute;
+	right:100px;
+	top:150vh; 
 }

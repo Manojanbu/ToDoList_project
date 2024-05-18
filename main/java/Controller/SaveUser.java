@@ -20,7 +20,14 @@ public class SaveUser extends HttpServlet
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-		int id=Integer.parseInt(req.getParameter("id"));
+		UserDao dao =new UserDao();
+		
+		
+		int id;
+		try {
+			id = dao.autoUserId();
+		
+	
 		String name=req.getParameter("name");
 		String email=req.getParameter("email");
 		long contact=Long.parseLong(req.getParameter("contact"));
@@ -30,11 +37,11 @@ public class SaveUser extends HttpServlet
 		//converting image file(part) into byte[]
 		byte[] imageByte=imagePart.getInputStream().readAllBytes();
 		
-		User user=new User(id, name, email, contact, pass, imageByte);
 		
-		UserDao dao=new UserDao();
 		
-		try {
+		User user=new User(id,name, email, contact, pass, imageByte);
+		
+		
 			int res=dao.insert(user);
 			
 			if(res>0)
@@ -49,17 +56,14 @@ public class SaveUser extends HttpServlet
 			}
 			
 			
-			
-			
-			
-			
-			
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+			
+			
+			
+			
+		
 	}
 }

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+form{
+	
+	display: inline-block;
+	padding: 30px;
+	line-height: 40px;
+	height: 350px;
+	width: 300px;
+	border-radius: 30px;
+	margin-left:800px;
+	margin-top: 130px;
+	background-color: azure;
+	font-family: sans-serif;
+	
+}
+input{
+	border-radius: 5px;
+}
+body{
+	background-image:url("https://img.freepik.com/free-photo/flat-lay-mockup-smartphone-with-orange-background_23-2148226815.jpg?w=1060");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+	}
+	#in1{
+		position: absolute;
+		margin-left: 65px;
+		margin-top: 10px;
+	}
+	#in2{
+		position: absolute;
+		margin-left: 50px;
+		margin-top: 10px;
+	}
+	#bt{
+		
+		margin-left: 100px;
+		margin-bottom: 10px;
+		padding: 5px 20px;
+		border-radius: 30px;
+		background-color: lightgreen;
+		color: white;
+		border-color: orange;
+	}
+	#bt:hover{
+		background-color: orange;
+		border-color: lightgreen;
+	}

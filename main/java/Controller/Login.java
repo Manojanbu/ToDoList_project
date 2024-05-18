@@ -1,6 +1,7 @@
 package Controller;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import DAO.UserDao;
+import DTO.Task;
 import DTO.User;
 @WebServlet("/login")
 public class Login extends HttpServlet
@@ -31,6 +33,9 @@ public class Login extends HttpServlet
 			{
 				if(u.getUserpassword().equals(password))
 				{
+					List<Task> tasks=dao.getTask(u.getUserid());
+					req.setAttribute("tasks", tasks);
+					
 					HttpSession ses=req.getSession();
 					ses.setAttribute("user", u);
 //					req.getSession().setAttribute("User", u);
@@ -46,7 +51,7 @@ public class Login extends HttpServlet
 			{
 				req.setAttribute("message", "Login failed");
 				req.getRequestDispatcher("login.jsp").include(req, resp);
-			}	
+			}
 		}
 		catch (ClassNotFoundException | SQLException ex) 
 		{
